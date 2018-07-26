@@ -1,0 +1,56 @@
+/* https://www.w3schools.com/ */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 35%;
+  padding: 3% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  background: #FFFFFF;
+  padding: 40px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.form label {
+  float:left;
+  clear: both;
+}
+.form input {
+  float:right;
+  width: 70%;
+  margin: 0 0 15px;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 8px;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+.form button:hover {
+  background: #000;
+}
+
+body {
+	/*background-color: #FFEE58;*/
+	font-family: "Roboto", sans-serif;
+}
+
+/* https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+@media only screen and (max-width: 1000px) {
+
+  .login-page {
+    width: 95%;
+    padding: 3% 0 0;
+    margin: auto;
+  }
+}
