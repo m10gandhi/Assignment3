@@ -54,7 +54,7 @@ header ("Location: dashboard.php");
 
 elseif (!(isset($_SESSION['fname']) && $_SESSION['fname'] != '')) {
 
-header ("Location: login.html");
+header ("Location: login.php");
 
 }
 else{

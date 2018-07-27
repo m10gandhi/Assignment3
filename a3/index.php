@@ -1,17 +1,16 @@
 <?php
-
- session_start();
-if (isset($_SESSION['first_name']) == "Admin")  {
+session_start();
+if (isset($_SESSION['fname']) == "Admin")  {
 
  header ("Location: dashadmin.php");
 }
 
-elseif(isset($_SESSION['first_name'])){
-  header ("Location: dashboard.php");  
+elseif(!isset($_SESSION['fname']) == "Admin"){
+ header("Location: dashboard.php");  
 }
 
 else{
-
+header("Location: index.php");
 }
 
 ?>

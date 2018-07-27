@@ -1,6 +1,6 @@
 <?php
 session_start();
-unset($_Session['first_name']);
+unset($_Session['fname']);
 session_destroy();
-header('Location: index.html')
+header('Location: index.php')
 ?>
