@@ -19,6 +19,9 @@ $hash = hash_hmac('md5', $ppassword, $salt);
  $select->execute();
  $data=$select->fetch();
 $firstname = $data['fname'] ;
+$lastname = $data['lname'] ;
+$phone = $data['phone'] ;
+$id = $data['user_id'];
 
  if($data['email']!=$email and $data['ppassword']!=$hash)
  {
@@ -32,7 +35,8 @@ elseif($data['email']=='admin@prepme.com' and $data['ppassword']==$hash)
     $_SESSION['email'] = $_POST['email']; // store username
     $_SESSION['ppassword'] = $_POST['ppassword']; // store password
   $_SESSION['fname'] = $firstname;
-$_SESSION['lname'] = $lname;
+$_SESSION['lname'] = $lastname;
+$_SESSION['phone'] = $phone;
 
 
     header('location: dashadmin.php');
@@ -45,7 +49,9 @@ $_SESSION['lname'] = $lname;
     $_SESSION['email'] = $_POST['email']; // store username
     $_SESSION['ppassword'] = $_POST['ppassword']; // store password
   $_SESSION['fname'] = $firstname;
-$_SESSION['lname'] = $lname;
+$_SESSION['lname'] = $lastname;
+$_SESSION['phone'] = $phone;
+$_SESSION['id'] = $id;
 
     header('location: dashboard.php');
   }

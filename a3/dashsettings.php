@@ -1,3 +1,21 @@
+<?php
+$servername = "db.cs.dal.ca";
+$username = "mmgandhi";
+$password = "B00788134";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=mmgandhi", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully"; 
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +25,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+<link rel="stylesheet" type="text/css" href="css/dashsettings.css">
 </head>
 <body>
    <div id="wrapper">
@@ -19,19 +38,16 @@
                     </a>
                 </li>
                 <li>
-                    <a href="dashadmin.php" >Dashboard</a>
+                    <a href="dashboard.php" >Dashboard</a>
                 </li>
                 <li>
-                    <a href="dashtopics.php">Topics</a>
+                    <a href="#">Quiz Score</a>
                 </li>
                 <li>
-                    <a href="dashquiz.php">Quiz</a>
+                    <a href="#">Groups</a>
                 </li>
                 <li>
-                    <a href="dashusers.php">Users</a>
-                </li>
-                <li>
-                    <a href="dashsettings.php" class="active">Settings</a>
+                    <a href="#">Settings</a>
                 </li>
                 <li>
                     <a href="logout.php">Logout</a>
@@ -42,6 +58,7 @@
         <!-- Page Content -->
         <div id="content-wrapper">
             <div class="container-fluid">
+                        <a href="#menu-toggle" class="btn btn-default" id="men-toggle">Toggle Menu</a>
                 <div class="row">
                     <div class="col-lg-12">
                          <h1>Welcom,</h1>
@@ -62,7 +79,6 @@ else{
     echo $_SESSION['fname'];
 }
     ?></h2>
-                        <a href="#menu-toggle" class="btn btn-default" id="men-toggle">Toggle Menu</a>
                     </div>
                  <script>
     $("#men-toggle").click(function(e) {
@@ -70,6 +86,43 @@ else{
         $("#wrapper").toggleClass("toggled");
     });
     </script>
+                </div>
+                <div class="row">
+<form action="/action_page.php" style="max-width:500px;margin:auto">
+  <h2>Register Form</h2>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" placeholder="First name" name="fname">
+  </div>
+
+<div class="input-container">
+<i class="fa fa-user-o icon"></i>
+    <input class="input-field" type="text" placeholder="Last name" name="lname">
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="email" placeholder="Email" name="email">
+  </div>
+  
+<div class="input-container">
+<i class="fa fa-mobile-phone icon"></i>
+    <input class="input-field" type="number" placeholder="Phone" name="phone">
+  </div>
+
+<button type="submit" class="btn1">Update</button>
+
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" placeholder="Password" name="ppassword">
+  </div>
+
+<div class="input-container">
+    <i class="fa fa-key-o icon"></i>
+    <input class="input-field" type="password" placeholder="Confirm Password" name="cpassword">
+  </div>
+  <button type="submit" class="btn1">Update</button>
+</form>
                 </div>
             </div>
         </div>

@@ -5,8 +5,8 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
    <div id="wrapper">
@@ -14,12 +14,12 @@
         <div id="sidebar-wrapper">
             <ul class="nav-sidebar">
                 <li class="sidebar-inner">
-                    <a href="index.php">
-                        Start Bootstrap
+                    <a href="#">
+                        Prep Me
                     </a>
                 </li>
                 <li>
-                    <a href="dashadmin.php" class="active">Dashboard</a>
+                    <a href="#" class="active">Dashboard</a>
                 </li>
                 <li>
                     <a href="dashtopics.php">Topics</a>
@@ -31,9 +31,6 @@
                     <a href="dashusers.php">Users</a>
                 </li>
                 <li>
-                    <a href="dashsettings.php">Settings</a>
-                </li>
-                <li>
                     <a href="logout.php">Logout</a>
                 </li>
             </ul>
@@ -42,6 +39,7 @@
         <!-- Page Content -->
         <div id="content-wrapper">
             <div class="container-fluid">
+                 <a href="#menu-toggle" class="btn btn-default" id="men-toggle">Toggle Menu</a>
                 <div class="row">
                     <div class="col-lg-12">
                          <h1>Welcom,</h1>
@@ -62,7 +60,7 @@ else{
     echo $_SESSION['fname'];
 }
     ?></h2>
-                        <a href="#menu-toggle" class="btn btn-default" id="men-toggle">Toggle Menu</a>
+                       
                     </div>
                  <script>
     $("#men-toggle").click(function(e) {

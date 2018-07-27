@@ -37,24 +37,21 @@ header('location:dashadmin.php');
         <div id="sidebar-wrapper">
             <ul class="nav-sidebar">
                 <li class="sidebar-inner">
-                    <a href="index.php">
-                        Start Bootstrap
+                    <a href="#">
+                        Prep Me
                     </a>
                 </li>
                 <li>
                     <a href="dashadmin.php" >Dashboard</a>
                 </li>
                 <li>
-                    <a href="dashtopics.php" class="active">Topics</a>
+                    <a href="#">Topics</a>
                 </li>
                 <li>
                     <a href="dashquiz.php">Quiz</a>
                 </li>
                 <li>
                     <a href="dashusers.php">Users</a>
-                </li>
-                <li>
-                    <a href="dashsettings.php">Settings</a>
                 </li>
                 <li>
                     <a href="logout.php">Logout</a>

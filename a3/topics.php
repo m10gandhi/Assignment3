@@ -1,3 +1,21 @@
+
+<?php
+$servername = "db.cs.dal.ca";
+$username = "mmgandhi";
+$password = "B00788134";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=mmgandhi", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully"; 
+    }
+catch(PDOException $e)
+    {
+    echo "Connection failed: " . $e->getMessage();
+    }
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +49,6 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#">PrepMe</a>
         </div>
-
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
             <li><a href="#"><span class="glyphicon glyphicon-lock"> Groups</span></a> </li>

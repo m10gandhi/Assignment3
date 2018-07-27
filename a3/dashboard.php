@@ -15,7 +15,7 @@
             <ul class="nav-sidebar">
                 <li class="sidebar-inner">
                     <a href="#">
-                        Start Bootstrap
+                        Prep Me
                     </a>
                 </li>
                 <li>
@@ -28,7 +28,7 @@
                     <a href="#">Groups</a>
                 </li>
                 <li>
-                    <a href="#">Settings</a>
+                    <a href="dashsettings.php">Settings</a>
                 </li>
                 <li>
                     <a href="logout.php">Logout</a>
@@ -40,6 +40,7 @@
         <!-- Page Content -->
         <div id="content-wrapper">
             <div class="container-fluid">
+            	 <a href="#menu-toggle" class="btn btn-default" id="men-toggle">Toggle Menu</a> 
                 <div class="row">
                     <div class="col-lg-12">
                          <h1>Welcom,</h1>
@@ -60,7 +61,7 @@ else{
     echo $_SESSION['fname'];
 }
     ?></h2>
-                        <a href="#menu-toggle" class="btn btn-default" id="men-toggle">Toggle Menu</a>
+                        
                     </div>
                  <script>
     $("#men-toggle").click(function(e) {

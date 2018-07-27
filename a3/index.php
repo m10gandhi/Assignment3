@@ -1,3 +1,20 @@
+<?php
+
+ session_start();
+if (isset($_SESSION['first_name']) == "Admin")  {
+
+ header ("Location: dashadmin.php");
+}
+
+elseif(isset($_SESSION['first_name'])){
+  header ("Location: dashboard.php");  
+}
+
+else{
+
+}
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
